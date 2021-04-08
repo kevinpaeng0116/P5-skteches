@@ -3,49 +3,57 @@ function setup() {
 }
 
 function draw() {
-	//Top of S
-	drawLine(10);
+	//top S
+	drawS(10, 10, color(255,0,0), color(0,0,252));
 
-	//First Side of S(left)
-  	fill(255, 0, 0);
-  	square(10, 35, 25);
-
-  	fill(0, 0, 255);
-  	
-  	square(10, 60, 25);
-  	fill(255, 0, 0);
-  	square(10, 85, 25);
-
-  	//Middle line of S
-  	drawLine(110);
-
-  	//Second Side of S(right)
-  	fill(255, 0, 0);
-  	square(110, 135, 25);
-
-  	fill(0, 0, 255);
-  	square(110, 160, 25);
-
-  	fill(255, 0, 0);
-  	square(110, 185, 25);
-
-  	//draw bottom line
-  	drawLine(210);
+  	//Bottom S
+  	drawS(40, 40, color(0,255,0), color(100,100,20));
 }
 
-function drawLine(yValue){
-	fill(0, 0, 255);
-  	square(10,yValue,25);
+function drawS(xValue, yValue, color1, color2){
+	const ogX = xValue;
+	//Top of S
+	drawLine(ogX, yValue, color1, color2);
 
-	fill(255, 0, 0);
-  	square(35,yValue,25);
+	//First Side of S(left)
+  	fill(color1);
+  	square(xValue, yValue+=25, 25);
 
-	fill(0, 0, 255);
-  	square(60, yValue, 25);
+  	fill(color2);  	
+  	square(xValue, yValue += 25, 25);
+  	
+  	fill(color1);
+  	square(xValue, yValue += 25, 25);
 
-	fill(255, 0, 0);
-  	square(85,yValue,25);
+  	//Middle line of S
+  	drawLine(ogX, yValue += 25, color1, color2);
 
-	fill(0, 0, 255);
-  	square(110, yValue, 25);
+  	//Second Side of S(right)
+  	fill(color1);
+  	square(xValue+=100, yValue+=25, 25);
+
+  	fill(color2);
+  	square(xValue, yValue += 25, 25);
+
+  	square(xValue, yValue+=25, 25);
+
+  	//draw bottom line
+  	drawLine(ogX, yValue+=25, color1, color2);
+}
+
+function drawLine(xValue, yValue, color1, color2){
+	fill(color1);
+  	square(xValue, yValue,25);
+
+	fill(color2);
+  	square(xValue += 25,yValue,25);
+
+	fill(color1);
+  	square(xValue += 25, yValue, 25);
+
+	fill(color2);
+  	square(xValue += 25,yValue,25);
+
+	fill(color1);
+  	square(xValue += 25, yValue, 25);
 }
