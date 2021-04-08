@@ -3,25 +3,14 @@ function setup() {
 }
 
 function draw() {
-	//top S
-	//drawS(10, 10, color(255,0,0), color(0,0,252));
-
-  	//Bottom S
-  	//drawS(40, 40, color(0,255,0), color(100,100,20));
-  	//noStroke();
-  	strokeWeight(0)
-	fill(0,0,0);
-  	arc(400, 300, 280, 280, PI, TWO_PI);
-  	arc(400, 400, 280, 280, TWO_PI, PI);
-
-  	fill(255,255,255);
-  	//circle(300, 150, 40);
-  	circle(400, 300, 140);
-  	circle(400, 400, 140);
-
-  	fill(0,0,0);
+	  	fill(0,0,0);
   	strokeWeight(50);
-  	line(280, 330, 520, 370);
+  	strokeCap(SQUARE)
+  	line(350, 300, 460, 270);
+  	line(350, 300, 300, 450);
+  	line(300, 450, 430, 410);
+  	line(430, 410, 400, 530);
+  	line(270, 570, 400, 530);
 }
 
 function drawS(xValue, yValue, color1, color2){
