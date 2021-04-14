@@ -1,11 +1,25 @@
 function setup() {
-  createCanvas(710, 400);
-  background('magenta')
-  fill('cyan')
-  strokeWeight(3);
-
+  createCanvas(1000, 1000);
 }
 
 function draw() {
-  ellipse(mouseX, mouseY, 50, 50);
+  line(100, 200, 100, 500);
+  line(200, 200, 200, 500);
+  line(300, 200, 300, 500);
+
+  line(100, 600, 100, 900);
+  line(200, 600, 200, 900);
+  line(300, 600, 300, 900);
+
+  line(100, 500, 200, 600);
+  line(200, 500, 300, 600);
+
+  line(100, 200, 200, 100);
+  line(200, 100, 300, 200);
+
+  line(300, 500, 250, 550);
+  line(100, 600, 150, 550);
+
+  line(100, 900, 200, 1000);
+  line(200, 1000, 300, 900);
 }
