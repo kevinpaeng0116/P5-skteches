@@ -1,53 +1,30 @@
+let img;
 function setup() {
   createCanvas(1000, 1000);
+  img = loadImage('./635426.jpg');
+
+}
+
+function preload(){
+  
 }
 
 function draw() {
-  stroke(100);
-strokeWeight(10);
-  //3d Part
-  line(300, 100, 400, 200);
-  line(300, 100, 200, 100);
-  line(400, 200, 300, 200);
-  line(400, 200, 400, 500);
-  line(300, 500, 400, 500);
-  line(400, 600, 400, 900);
-  line(400, 600, 300, 500);
-  line(300, 1000, 400, 900);
-  line(300, 1000, 200, 1000);
-  line(300, 900, 400, 900);
-  line(300, 600, 400, 600);
-  stroke(0);
-  //top lines
-  line(100, 200, 100, 500);
-  line(200, 200, 200, 500);
-  line(300, 200, 300, 500);
+  image(img, 0, 0);
+  fill(205,211,211)
+  textSize(700);
 
-//bottoms lines
-  line(100, 600, 100, 900);
-  line(200, 600, 200, 900);
-  line(300, 600, 300, 900);
+  text("S",250,800);
 
-//middle lines
-  line(100, 500, 200, 600);
-  line(200, 500, 300, 600);
-  line(300, 500, 250, 550);
-  line(100, 600, 150, 550);
-
-  //top tip
-  line(100, 200, 200, 100);
-  line(200, 100, 300, 200);
-
-//bottom tip
-  line(100, 900, 200, 1000);
-  line(200, 1000, 300, 900);
-
-
-
-
-
-
+  
+  for(let x = 0; x < 1000; x+=10){
+    for(let y = 0; y < 1000; y+=10){
+      fill(get(x,y));
+      circle(x,y,8);
+    }
+  }
 }
+
 
 
 
