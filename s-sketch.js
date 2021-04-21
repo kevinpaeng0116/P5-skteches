@@ -3,49 +3,37 @@ function setup() {
 }
 
 function draw() {
-strokeWeight(1);
+  //translate
+  //raotate
+  push();
+  fill(222,0,0);
+  translate(600, 300);
+  square(0,0,100);
+  rotate(.2);
 
-push()
-strokeWeight(2);
-line(0,0, 700, 300);
+  fill(189,0,0)
+  square(150, 60,100);
 
-pop()
-line(0,0, 670, 270);
+  pop();
+  fill(140,0,0)
+  rect(360, 300, 200, 100);
 
-push()
-strokeWeight(5)
+fill(125,0,0)
+  ellipse(340, 480, 100);
+  fill(110,0,0)
+  ellipse(420, 580, 90);
 
-pop()
-line(0,0, 610, 240);
+fill(101,0,0)
+  triangle(470, 570, 823, 590, 823, 680);
 
-push();
-strokeWeight(4)
-line(0,0, 560, 260);
+fill(70,0,0)
+  quad(823, 700, 823, 730, 520, 880, 500, 810);
 
-pop()
-line(0,0, 570, 290);
+fill(10,0,0)
 
-line(0,0, 600, 310);
+  arc(450, 730, 280, 300, 20, 110);
 
-push()
-strokeWeight(2)
-line(0,0, 670, 360);
 
-line(0,0, 700, 400);
-
-pop()
-line(0,0, 750, 500);
-
-push()
-strokeWeight(5)
-line(0,0, 720, 520);
-
-pop()
-line(0,0, 640, 480);
-
-push()
-strokeWeight(8)
-line(0,0, 550, 430);
 
 }
 
