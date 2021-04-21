@@ -1,40 +1,39 @@
+
+let b1, b2, c1, c2;
+
 function setup() {
   createCanvas(1000, 1000);
+  b1 = color(255);
+  b2 = color(0);
+  c1=color(204, 102, 100);//left
+  c2 = color(0, 102, 153);//right
+
+  noLoop();
 }
 
 function draw() {
-  //translate
-  //raotate
-  push();
-  fill(222,0,0);
-  translate(600, 300);
-  square(0,0,100);
-  rotate(.2);
+  setGradient(0, 0, 1000, 1000, c1, c2);
+  quad(330, 100, 430, 100, 300, 300, 200, 300);
 
-  fill(189,0,0)
-  square(150, 60,100);
+  quad(200, 330, 300, 330, 430, 530, 330, 530);
 
-  pop();
-  fill(140,0,0)
-  rect(360, 300, 200, 100);
+  quad(330, 560, 430, 560, 300, 730, 200, 730);
 
-fill(125,0,0)
-  ellipse(340, 480, 100);
-  fill(110,0,0)
-  ellipse(420, 580, 90);
+  fill(c1 );
+  quad(600, 100, 700, 100, 800, 300, 700, 300);
+  quad(700, 330, 800, 330, 700, 530, 600, 530);
+  quad(600, 560, 700, 560, 800, 730, 700, 730);
+}
 
-fill(101,0,0)
-  triangle(470, 570, 823, 590, 823, 680);
-
-fill(70,0,0)
-  quad(823, 700, 823, 730, 520, 880, 500, 810);
-
-fill(10,0,0)
-
-  arc(450, 730, 280, 300, 20, 110);
-
-
-
+function setGradient(x,y,w,h,c1,c2){
+  for(let i = x; i <= x + w; i++){
+    let inner = map(i,x,x+w,0,1);
+    let c = lerpColor(c1, c2, inner);
+    stroke(c);
+    fill(c);
+    line(i,y,i, y+h);
+  }
+  
 }
 
 
